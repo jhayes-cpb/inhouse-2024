@@ -1,0 +1,22 @@
+uuid: 61fad5ce-f0b5-4dda-a9e6-da85b2ea1d1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.conference_room
+id: node.conference_room.promote
+field_name: promote
+entity_type: node
+bundle: conference_room
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

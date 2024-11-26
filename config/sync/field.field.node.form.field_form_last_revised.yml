@@ -1,0 +1,21 @@
+uuid: a237bfc2-fb65-4bcf-a339-9d98ec08d55c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_form_last_revised
+    - node.type.form
+  module:
+    - datetime
+id: node.form.field_form_last_revised
+field_name: field_form_last_revised
+entity_type: node
+bundle: form
+label: 'Last Revised'
+description: 'When was this form or document last officially updated'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

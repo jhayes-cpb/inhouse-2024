@@ -1,0 +1,69 @@
+uuid: c1dc81db-c074-459a-8238-ac0ee6dae0f4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_cpb_department_2
+field_name: field_cpb_department_2
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'C&PA'
+      label: 'Corporate & Public Affairs'
+    -
+      value: COO
+      label: 'Chief Operating Officer'
+    -
+      value: EMLE
+      label: 'Educational Media and Learning Experiences'
+    -
+      value: EXEC
+      label: 'Executive Office'
+    -
+      value: HR
+      label: 'Human Resources'
+    -
+      value: IT
+      label: 'Information Technology'
+    -
+      value: MSTRA
+      label: 'Innovation and System Strategies'
+    -
+      value: OBF
+      label: 'Office of Budget and Finance'
+    -
+      value: OCS
+      label: 'Office of the Corporate Secretary'
+    -
+      value: OIG
+      label: 'Office of the Inspector General'
+    -
+      value: OGC
+      label: 'Office of the General Counsel'
+    -
+      value: OS
+      label: 'Office Services'
+    -
+      value: RADIO
+      label: 'Radio, Journalism, and CSG Services'
+    -
+      value: RTL
+      label: 'Ready to Learn'
+    -
+      value: TVP
+      label: Television
+    -
+      value: ENG
+      label: Engagement
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

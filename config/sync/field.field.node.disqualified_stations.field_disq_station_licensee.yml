@@ -1,0 +1,19 @@
+uuid: 2cd7c935-ddf3-49f2-87c9-b7589f85ec4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_disq_station_licensee
+    - node.type.disqualified_stations
+id: node.disqualified_stations.field_disq_station_licensee
+field_name: field_disq_station_licensee
+entity_type: node
+bundle: disqualified_stations
+label: Licensee
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

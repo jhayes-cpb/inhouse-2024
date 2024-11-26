@@ -1,0 +1,38 @@
+uuid: 4b0bd92e-f4c2-403b-9011-e02943fbef83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_conf_room_profile_img
+    - node.type.conference_room
+  module:
+    - image
+id: node.conference_room.field_conf_room_profile_img
+field_name: field_conf_room_profile_img
+entity_type: node
+bundle: conference_room
+label: Photo
+description: 'a photo of the conference room'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: conference-rooms
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: dbb7ba13-0f71-454f-8769-b6206496185d
+    alt: 'a stock photo of a conference room'
+    title: ''
+    width: 1280
+    height: 853
+field_type: image

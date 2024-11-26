@@ -1,0 +1,80 @@
+uuid: c6246f26-b7de-41ec-9506-ef46422ff854
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.policy_section.field_policy_section_desc
+    - field.field.paragraph.policy_section.field_policy_section_title
+    - field.field.paragraph.policy_section.field_policy_section_view
+    - paragraphs.paragraphs_type.policy_section
+  module:
+    - ds
+    - text
+    - viewfield
+id: paragraph.policy_section.default
+targetEntityType: paragraph
+bundle: policy_section
+mode: default
+content:
+  field_policy_section_desc:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    weight: 1
+    region: content
+  field_policy_section_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            lbw: false
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: true
+            ow-el: h3
+            ow-cl: ''
+            ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 0
+    region: content
+  field_policy_section_view:
+    type: viewfield_default
+    label: hidden
+    settings:
+      view_title: hidden
+      always_build_output: false
+      empty_view_title: hidden
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true

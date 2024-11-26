@@ -1,0 +1,21 @@
+uuid: d1d3ceb2-bb0f-4b77-86a3-58547f0d0275
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_conf_room_size
+    - node.type.conference_room
+  module:
+    - options
+id: node.conference_room.field_conf_room_size
+field_name: field_conf_room_size
+entity_type: node
+bundle: conference_room
+label: 'Conf Room Size'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

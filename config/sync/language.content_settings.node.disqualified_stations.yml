@@ -1,0 +1,11 @@
+uuid: 20f1e862-5b86-4678-89bc-c03bfb59b659
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.disqualified_stations
+id: node.disqualified_stations
+target_entity_type_id: node
+target_bundle: disqualified_stations
+default_langcode: site_default
+language_alterable: false

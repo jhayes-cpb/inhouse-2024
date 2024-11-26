@@ -1,0 +1,31 @@
+uuid: 423c3872-69f2-44a5-a7e0-2d8bb713ea56
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4f805385-5864-46f6-ab37-2fa2e412e1c6'
+  module:
+    - block_content
+    - system
+  theme:
+    - cpb_inhouse
+id: quicklinks
+theme: cpb_inhouse
+region: content
+weight: -12
+provider: null
+plugin: 'block_content:4f805385-5864-46f6-ab37-2fa2e412e1c6'
+settings:
+  id: 'block_content:4f805385-5864-46f6-ab37-2fa2e412e1c6'
+  label: 'Quick Links'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

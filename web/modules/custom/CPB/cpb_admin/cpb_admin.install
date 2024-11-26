@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Installation functions for CPB Admin Module.
+ */
+
+use Drupal\user\RoleInterface;
+
+/**
+ * Implements hook_install().
+ */
+function cpb_admin_install() {
+  user_role_change_permissions(RoleInterface::ANONYMOUS_ID, array(
+    'administer cpb admin module' => TRUE,
+  ));
+}

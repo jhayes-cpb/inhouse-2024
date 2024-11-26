@@ -1,0 +1,21 @@
+uuid: 7561c13c-961e-4a2a-9717-ade044c7bf84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cpb_department_2
+    - node.type.cpb_employee
+  module:
+    - options
+id: node.cpb_employee.field_cpb_department_2
+field_name: field_cpb_department_2
+entity_type: node
+bundle: cpb_employee
+label: Department
+description: 'You can select more than one Department - use the Control key to select more than one.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,10 @@
+uuid: 3f7274ae-9784-411c-903d-dc970b286346
+langcode: en
+status: true
+dependencies: {  }
+id: policy_section
+label: 'Policy Section'
+icon_uuid: null
+icon_default: null
+description: 'for policy pages to feature sets of policies that are individual nodes'
+behavior_plugins: {  }

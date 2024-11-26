@@ -1,0 +1,5 @@
+services:
+  cpb_cleannode.log_service:
+    class: Drupal\cpb_cleannode\Services\CpbLoggerService
+    arguments:
+      - '@logger.factory'

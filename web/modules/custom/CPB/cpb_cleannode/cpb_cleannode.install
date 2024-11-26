@@ -1,0 +1,105 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the CPB Clean Node module.
+ */
+
+/**
+ * Implements hook_install()
+ */
+//function cpb_cleannode_install() {
+//  variable_set('cpb_cleannode_cron_enable', FALSE);
+//}
+
+/**
+ * Implements hook_uninstall()
+ */
+//function cpb_cleannode_uninstall() {
+//  variable_del('cpb_cleannode_cron_enable');
+//  drupal_uninstall_schema('cpb_cleannode');
+//}
+
+/**
+ * Implements hook_schema().
+ */
+function cpb_cleannode_schema() {
+  $schema['cpb_cleannode_stats'] = array(
+    'description' => 'Stores stats about cleaned data.',
+    'fields' => array(
+      'cid' => array(
+        'description' => 'Primary Key: Unique cpb cleannode stats ID.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'num_cleaned' => array(
+        'description' => 'The number of cleaned string occurrences for the node',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => FALSE,
+        'default' => 0,
+      ),
+      'summary' => array(
+        'description' => 'Summary description of the cleaning',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'type' => array(
+        'description' => 'The content type of the cleaned node',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'title' => array(
+        'description' => 'The title of the cleaned node',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'vid' => array(
+        'description' => 'Node revision id. Foreign key to {node_revision}',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'nid' => array(
+        'description' => 'Node id. Foreign key to {node}',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'uid' => array(
+        'description' => 'The user id of the moderator who made the change. Foreign key to {users}.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'stamp' => array(
+        'description' => 'The timestamp of the change.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+    ),
+    'primary key' => array('cid'),
+    'indexes' => array(
+      'nid' => array('nid'),
+      'vid' => array('vid'),
+    ),
+    'foreign_keys' => array(
+      'nid' => array('node' => 'nid'),
+      'vid' => array('node_revision' => 'vid'),
+      'uid' => array('users' => 'uid'),
+    ),
+  );
+
+  return $schema;
+}

@@ -1,0 +1,22 @@
+uuid: 94ce0fc0-a11b-4ceb-b2f4-11641f3b5c31
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: cpb_employees
+label: Employees
+type: 'canonical_entities:node'
+pattern: 'phonelist/[node:title]'
+selection_criteria:
+  fd678b7e-c1f3-4772-9ce2-7efb39fb67bd:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: fd678b7e-c1f3-4772-9ce2-7efb39fb67bd
+    context_mapping:
+      node: node
+    bundles:
+      cpb_employee: cpb_employee
+selection_logic: and
+weight: -5
+relationships: {  }

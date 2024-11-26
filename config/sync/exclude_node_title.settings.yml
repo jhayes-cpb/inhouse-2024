@@ -1,0 +1,28 @@
+_core:
+  default_config_hash: tFcyNjovmdPA1ZVm7j2Iymt809j-r2F5uSDJAOI_QV8
+nid_list: {  }
+translation_sync: true
+search: false
+type: remove
+content_types:
+  article: none
+  cpb_announcement: none
+  cpb_employee: all
+  cpb_newsclips: none
+  cpb_newsclips_links: none
+  cpb_page: none
+  cpb_weekly_reports: none
+  page: none
+  simplenews_issue: none
+content_type_modes:
+  article: {  }
+  cpb_announcement: {  }
+  cpb_employee:
+    - full
+    - teaser
+  cpb_newsclips: {  }
+  cpb_newsclips_links: {  }
+  cpb_page: {  }
+  cpb_weekly_reports: {  }
+  page: {  }
+  simplenews_issue: {  }

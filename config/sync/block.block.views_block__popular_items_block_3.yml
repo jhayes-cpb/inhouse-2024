@@ -1,0 +1,30 @@
+uuid: 7835f0b8-791a-4a91-ab8b-c2d6f18b0415
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.popular_items
+  module:
+    - system
+    - views
+  theme:
+    - cpb_inhouse
+id: views_block__popular_items_block_3
+theme: cpb_inhouse
+region: sidebar_second
+weight: -9
+provider: null
+plugin: 'views_block:popular_items-block_3'
+settings:
+  id: 'views_block:popular_items-block_3'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

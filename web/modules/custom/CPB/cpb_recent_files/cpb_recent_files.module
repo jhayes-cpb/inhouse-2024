@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * @file
+ * Contains cpb_recent_files.module
+ */
+
+// No content needed here, we're running everything from the Plugins
+

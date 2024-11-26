@@ -1,0 +1,20 @@
+uuid: d1832b48-2f34-474a-9516-1d122f262c38
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - node
+id: node.field_cpb_employee_picture
+field_name: field_cpb_employee_picture
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

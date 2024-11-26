@@ -1,0 +1,17 @@
+uuid: 583e6923-dcd3-4256-b50e-cf903110eefc
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Announcement
+type: cpb_announcement
+description: 'Announcements, new hires, office notices, events, etc.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

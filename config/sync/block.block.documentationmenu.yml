@@ -1,0 +1,33 @@
+uuid: 1450af0d-7754-4dd9-b191-38b3d2e4fd23
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.cpb-documentation-menu
+  module:
+    - node
+    - system
+  theme:
+    - cpb_inhouse
+id: documentationmenu
+theme: cpb_inhouse
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:cpb-documentation-menu'
+settings:
+  id: 'system_menu_block:cpb-documentation-menu'
+  label: 'Documentation Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      cpb_documentation: cpb_documentation

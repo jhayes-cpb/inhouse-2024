@@ -1,0 +1,6 @@
+name: 'CPB XFrame Module'
+type: module
+description: "CPB: Enable limited iframes for piwik analytics."
+package: 'CPB'
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10

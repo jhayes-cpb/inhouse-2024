@@ -1,0 +1,18 @@
+uuid: c27d15a0-0d09-4c18-bcd1-389756a6efe6
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'CPB Page'
+type: cpb_page
+description: 'Fixed content page.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

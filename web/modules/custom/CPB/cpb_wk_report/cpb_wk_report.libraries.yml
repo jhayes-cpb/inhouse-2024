@@ -1,0 +1,20 @@
+datepick:
+  version: 1.x
+  css:
+    component:
+      css/js-datepick/dp-light.css: {}
+  js:
+    js/js-datepick/datepicker.js: {}
+
+cpb_wk_report:
+  version: 1.x
+  css:
+    component:
+      #css/cpb_wk_report.css: {}
+  js:
+    js/cpb_wk_report.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - cpb_wk_report/datepick

@@ -1,0 +1,7 @@
+cpb_admin.main:
+  path: '/admin/config/cpb'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'CPB Admin'
+  requirements:
+    _permission: 'administer cpb admin module'

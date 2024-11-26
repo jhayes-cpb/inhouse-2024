@@ -1,0 +1,30 @@
+uuid: 997d4630-82a9-4870-b29d-348feb3f49d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.cpb_colleague_spotlights.body
+    - node.type.cpb_colleague_spotlights
+  module:
+    - text
+    - user
+id: node.cpb_colleague_spotlights.default
+targetEntityType: node
+bundle: cpb_colleague_spotlights
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

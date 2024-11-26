@@ -1,0 +1,19 @@
+uuid: d74ba778-5685-4b23-b4bc-feeee9218f5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_inhouse_policy_revised
+    - node.type.policy_page
+id: node.policy_page.field_inhouse_policy_revised
+field_name: field_inhouse_policy_revised
+entity_type: node
+bundle: policy_page
+label: 'Last Revised'
+description: 'When was this policy last updated?'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

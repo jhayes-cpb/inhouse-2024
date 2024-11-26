@@ -1,0 +1,32 @@
+uuid: 3651cbbe-19c5-44ed-9a0f-83f5c873bfc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.cpb_newsclips_links
+    - taxonomy.vocabulary.cpb_newsclips_taxonomy
+  module:
+    - exclude_node_title
+    - node
+    - system
+    - taxonomy
+    - toolbar
+id: cpb_news_clips
+label: 'News Clips'
+weight: 5
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'administer taxonomy'
+  - 'create cpb_newsclips_links content'
+  - 'delete cpb_newsclips_links revisions'
+  - 'delete own cpb_newsclips_links content'
+  - 'delete terms in cpb_newsclips_taxonomy'
+  - 'edit any cpb_newsclips_links content'
+  - 'edit own cpb_newsclips_links content'
+  - 'edit terms in cpb_newsclips_taxonomy'
+  - 'revert cpb_newsclips_links revisions'
+  - 'use exclude node title'
+  - 'view cpb_newsclips_links revisions'
+  - 'view own unpublished content'
+  - 'view the administration theme'

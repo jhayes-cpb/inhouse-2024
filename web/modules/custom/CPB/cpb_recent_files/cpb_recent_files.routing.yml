@@ -1,0 +1,13 @@
+cpb_recent_files.content:
+  path: '/recent_files'
+  defaults:
+    _title: 'Recent Files'
+  requirements:
+    _permission: 'access content'
+cpb_recent_files.form:
+  path: '/admin/config/cpb/cpb_recent_files'
+  defaults:
+    _form: 'Drupal\cpb_recent_files\Form\CPBRecentFilesForm'
+    _title: 'CPB Recent Files settings'
+  requirements:
+    _permission: 'administer site configuration'

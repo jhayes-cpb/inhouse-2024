@@ -1,0 +1,30 @@
+uuid: ab6f3e33-04e1-4b71-8398-9e5ecb0b095c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.cpb_announcement.body
+    - field.field.node.cpb_announcement.field_cpb_date
+    - field.field.node.cpb_announcement.field_cpb_tags
+    - node.type.cpb_announcement
+  module:
+    - text
+    - user
+id: node.cpb_announcement.default
+targetEntityType: node
+bundle: cpb_announcement
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_cpb_date: true
+  field_cpb_tags: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

@@ -1,0 +1,29 @@
+uuid: d627accf-f9f4-4cd8-9fb1-cadee0b7a39b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_inhouse_policy_section
+    - node.type.policy_page
+    - taxonomy.vocabulary.policy
+id: node.policy_page.field_inhouse_policy_section
+field_name: field_inhouse_policy_section
+entity_type: node
+bundle: policy_page
+label: 'Policy Section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      policy: policy
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

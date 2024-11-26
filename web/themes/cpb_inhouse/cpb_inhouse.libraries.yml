@@ -1,0 +1,80 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+      '//fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic': { type: external, minified: true }
+
+bootstrap-scripts:
+  js:
+    bootstrap-library/js/affix.js: {}
+    bootstrap-library/js/alert.js: {}
+    bootstrap-library/js/button.js: {}
+    bootstrap-library/js/carousel.js: {}
+    bootstrap-library/js/collapse.js: {}
+    bootstrap-library/js/dropdown.js: {}
+    bootstrap-library/js/modal.js: {}
+    bootstrap-library/js/tooltip.js: {}
+    bootstrap-library/js/popover.js: {}
+    bootstrap-library/js/scrollspy.js: {}
+    bootstrap-library/js/tab.js: {}
+    bootstrap-library/js/transition.js: {}
+
+custom:
+  js:
+    js/custom.js: {}
+  dependencies:
+     - core/jquery
+# This was only for the Weekly Reports and was replaced by custom module JS
+# since Jquery UI Datepicker was removed from Drupal 9.x
+#     - core/jquery.ui.datepicker
+
+search-forms:
+  version: 1.x
+  js:
+    js/searchforms.js: {}
+  dependencies:
+    - core/jquery
+
+tabs:
+  js:
+    js/tabs.js: {}
+  css:
+    theme:
+      css/tabs.css: {}
+
+printer-map:
+  js:
+    js/image-map-pro.min.js: {}
+    js/printer-map.js: {}
+  css:
+    theme:
+      css/image-map-pro_n.min.css: {}
+  dependencies:
+    - core/jquery
+
+floorplan:
+  js:
+    js/misc/image-map-pro.min.js: {}
+    js/jquery-ui.min.js: {}
+    js/misc/floorplan.js: {}
+
+  css:
+    theme:
+      css/image-map-pro.min.css: {}
+      css/jquery-ui.min.css: {}
+      css/squares.min.css: {}
+
+accordion:
+  js:
+    js/accordion.js: {}
+
+fontawesome:
+  js:
+    js/fontawesome-all.min.js: {}
+
+mark:
+  js:
+    js/jquery.mark.js: {}
+    js/search_mark.js: {}
+
+

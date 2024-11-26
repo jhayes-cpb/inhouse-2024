@@ -1,0 +1,6 @@
+cpb_admin.main:
+  title: 'CPB Admin'
+  parent: system.admin_config
+  description: 'Admin area for CPB Custom Modules'
+  route_name: 'cpb_admin.main'
+  weight: -99999

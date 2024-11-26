@@ -1,0 +1,27 @@
+uuid: 42feb57f-d133-41cc-af46-3e609b7bad24
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_form_file
+    - node.type.form
+  module:
+    - file
+id: node.form.field_form_file
+field_name: field_form_file
+entity_type: node
+bundle: form
+label: 'Form File'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: inhouse-forms
+  file_extensions: 'xlsx docx pptx pdf txt md'
+  max_filesize: ''
+  description_field: false
+field_type: file

@@ -1,0 +1,16 @@
+uuid: 9b218f3a-4b18-4ea0-a3a0-650bf453fc83
+langcode: en
+status: true
+dependencies:
+  module:
+    - insert_view
+name: 'Plain & Unrestricted HTML'
+format: plain_unrestricted_html
+weight: 0
+filters:
+  insert_view:
+    id: insert_view
+    provider: insert_view
+    status: true
+    weight: 0
+    settings: {  }

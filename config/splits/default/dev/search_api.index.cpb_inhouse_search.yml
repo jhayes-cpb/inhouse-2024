@@ -1,0 +1,347 @@
+uuid: 96983cf8-a75c-4830-9278-c67bcf944bbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - field.storage.node.field_cpb_date
+    - field.storage.node.field_cpb_department_2
+    - field.storage.node.field_cpb_embedded_view
+    - field.storage.node.field_cpb_file
+    - field.storage.node.field_cpb_office_number
+    - field.storage.node.field_cpb_sidebar_content
+    - field.storage.node.field_email
+    - field.storage.node.field_first_name
+    - field.storage.node.field_phone_number
+    - field.storage.node.field_title
+    - field.storage.node.field_cpb_tags
+    - search_api.server.cpb_solr_8_3
+  module:
+    - search_api_solr
+    - taxonomy
+    - node
+    - search_api
+third_party_settings:
+  search_api_solr:
+    finalize: false
+    commit_before_finalize: false
+    commit_after_finalize: false
+    highlighter:
+      maxAnalyzedChars: 51200
+      fragmenter: gap
+      usePhraseHighlighter: true
+      highlightMultiTerm: true
+      preserveMulti: false
+      regex:
+        slop: 0.5
+        pattern: blank
+        maxAnalyzedChars: 10000
+      highlight:
+        mergeContiguous: false
+        requireFieldMatch: false
+        snippets: 3
+        fragsize: 0
+    mlt:
+      mintf: 1
+      mindf: 1
+      maxdf: 0
+      maxdfpct: 0
+      minwl: 0
+      maxwl: 0
+      maxqt: 100
+      maxntp: 2000
+      boost: false
+      interestingTerms: none
+    term_modifiers:
+      slop: 10000000
+      fuzzy: 2
+    advanced:
+      index_prefix: ''
+      collection: ''
+      timezone: ''
+    multilingual:
+      limit_to_content_language: false
+      include_language_independent: true
+id: cpb_inhouse_search
+name: 'CPB Inhouse Search'
+description: ''
+read_only: false
+field_settings:
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  field_cpb_date:
+    label: Date
+    datasource_id: 'entity:node'
+    property_path: field_cpb_date
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_cpb_date
+  field_cpb_department_2:
+    label: Department
+    datasource_id: 'entity:node'
+    property_path: field_cpb_department_2
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_cpb_department_2
+  field_cpb_embedded_view:
+    label: 'CPB Embedded View'
+    datasource_id: 'entity:node'
+    property_path: field_cpb_embedded_view
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_cpb_embedded_view
+  field_cpb_file:
+    label: Files
+    datasource_id: 'entity:node'
+    property_path: field_cpb_file
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_cpb_file
+  field_cpb_office_number:
+    label: 'Office Number'
+    datasource_id: 'entity:node'
+    property_path: field_cpb_office_number
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_cpb_office_number
+  field_cpb_sidebar_content:
+    label: 'CPB Sidebar Content'
+    datasource_id: 'entity:node'
+    property_path: field_cpb_sidebar_content
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_cpb_sidebar_content
+  field_email:
+    label: Email
+    datasource_id: 'entity:node'
+    property_path: field_email
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_email
+  field_first_name:
+    label: 'First Name'
+    datasource_id: 'entity:node'
+    property_path: field_first_name
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_first_name
+  field_phone_number:
+    label: 'Phone Number'
+    datasource_id: 'entity:node'
+    property_path: field_phone_number
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_phone_number
+  field_title:
+    label: 'Position Title'
+    datasource_id: 'entity:node'
+    property_path: field_title
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_title
+  name:
+    label: 'Tags » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_cpb_tags:entity:name'
+    type: text
+    boost: !!float 21
+    dependencies:
+      config:
+        - field.storage.node.field_cpb_tags
+      module:
+        - taxonomy
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - node
+  type:
+    label: 'Content type'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: text
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - cpb_announcement
+        - cpb_employee
+        - cpb_page
+        - top_links
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  entity_status: {  }
+  highlight:
+    weights:
+      postprocess_query: 0
+    prefix: '<strong>'
+    suffix: '</strong>'
+    excerpt: true
+    excerpt_length: 256
+    exclude_fields:
+      - field_cpb_embedded_view
+    highlight: always
+    highlight_partial: true
+  html_filter:
+    weights:
+      preprocess_index: -15
+      preprocess_query: -15
+    all_fields: true
+    fields:
+      - body
+      - field_cpb_date
+      - field_cpb_department_2
+      - field_cpb_embedded_view
+      - field_cpb_file
+      - field_cpb_office_number
+      - field_cpb_sidebar_content
+      - field_email
+      - field_first_name
+      - field_phone_number
+      - field_title
+      - name
+      - title
+      - type
+    title: true
+    alt: true
+    tags:
+      b: 2
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
+  ignorecase:
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+    all_fields: true
+    fields:
+      - body
+      - field_cpb_date
+      - field_cpb_department_2
+      - field_cpb_embedded_view
+      - field_cpb_file
+      - field_cpb_office_number
+      - field_cpb_sidebar_content
+      - field_email
+      - field_first_name
+      - field_phone_number
+      - field_title
+      - name
+      - title
+      - type
+  language_with_fallback: {  }
+  rendered_item: {  }
+  solr_date_range: {  }
+  stemmer:
+    weights:
+      preprocess_index: 0
+      preprocess_query: 0
+    all_fields: true
+    fields:
+      - body
+      - field_cpb_date
+      - field_cpb_department_2
+      - field_cpb_embedded_view
+      - field_cpb_file
+      - field_cpb_office_number
+      - field_cpb_sidebar_content
+      - field_email
+      - field_first_name
+      - field_phone_number
+      - field_title
+      - name
+      - title
+      - type
+    exceptions:
+      mexican: mexic
+      texan: texa
+  tokenizer:
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
+    all_fields: true
+    fields:
+      - body
+      - field_cpb_date
+      - field_cpb_department_2
+      - field_cpb_embedded_view
+      - field_cpb_file
+      - field_cpb_office_number
+      - field_cpb_sidebar_content
+      - field_email
+      - field_first_name
+      - field_phone_number
+      - field_title
+      - name
+      - title
+      - type
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '3'
+  transliteration:
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+    all_fields: true
+    fields:
+      - body
+      - field_cpb_date
+      - field_cpb_department_2
+      - field_cpb_embedded_view
+      - field_cpb_file
+      - field_cpb_office_number
+      - field_cpb_sidebar_content
+      - field_email
+      - field_first_name
+      - field_phone_number
+      - field_title
+      - name
+      - title
+      - type
+  type_boost:
+    weights:
+      preprocess_index: 0
+    boosts:
+      'entity:node':
+        datasource_boost: !!float 1
+        bundle_boosts:
+          cpb_announcement: !!float 8
+          cpb_employee: !!float 5
+          cpb_page: !!float 13
+          top_links: !!float 21
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: cpb_solr_8_3

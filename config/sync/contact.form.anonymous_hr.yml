@@ -1,0 +1,12 @@
+uuid: e1a38ab4-afb0-4541-9f15-13308d12dc1b
+langcode: en
+status: true
+dependencies: {  }
+id: anonymous_hr
+label: 'Contact HR anonymously.'
+recipients:
+  - hr@cpb.org
+reply: 'Thank you for contacting HR.'
+weight: 0
+message: 'This message has been sent anonymously. '
+redirect: ''

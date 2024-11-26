@@ -1,0 +1,94 @@
+<?php
+/**
+ * @file
+ * CPB Module to prune through nodes, removing items that are too old.
+ *
+ * Originally Stephen decided on 5 years max data for Weekly Reports, and 3 for Newsclips.
+ * However, now he's recommending just 1 year max data for each.
+ * 
+ * I'll recommend back 1 year max for Newsclips, and 3 for Weekly Reports.
+ *
+ * To be careful, the first step in the decommissioning of old nodes is to first just
+ * 'unpublish' them, then leave a small interval before deleting completely.
+ *
+ * I've already set up 'unpublish' via 'scheduler' for the MIGRATE module so that the
+ * daily migration from the old server includes setting a dependency on the 'scheduler'
+ * module, and sets the 'unpublish_on' field appropriately:
+ *    $unpubDate = strtotime('+1 years', $pubdateTimestamp);
+ *    $row->setSourceProperty('prepared_unpub_date', $unpubDate);
+ *
+ * To mimic this for manually-created nodes, below we do something similar here in a
+ * hook, hook_node_presave().
+ *
+ * So to recap, the current criteria and steps are as follows:
+ *
+ * Newsclips:
+ *  1. After 1 year, the node gets unpublished
+ *  2. After 1 further month, the node gets deleted
+ *
+ * Weekly Reports:
+ *  1. After 3 years, the node gets unpublished
+ *  2. After 1 further month, the node gets deleted
+ *
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_node_presave().
+ */
+function cpb_node_prune_node_presave(EntityInterface $node) {
+  /* Don't strictly have to check for contrib module as we have scheduler listed as an
+    express dependency in the info, but let's just be carefully redundant: */
+  $moduleHandler = \Drupal::service('module_handler');
+  if($moduleHandler->moduleExists('scheduler')) {
+    if($node->bundle() == 'cpb_weekly_reports' || $node->bundle() == 'cpb_newsclips_links') {
+      $unpubDate = strtotime('+1 years');
+      if ($node->bundle() == 'cpb_weekly_reports') {
+        $unpubDate = strtotime('+3 years');
+      }
+      $node->set('unpublish_on', $unpubDate);
+      // $message = 'unpublish set: ' . $unpubDate;
+      // debug: \Drupal::logger('cpb_node_prune')->notice($message);
+    }
+  }
+} // cpb_node_prune_node_presave()
+
+/**
+ * Implements hook_cron().
+ */
+function cpb_node_prune_cron() {
+  /* Weekly Reports: Delete old nodes */
+  $result = \Drupal::entityQuery("node")
+    ->condition('status', 0)
+    ->condition('type', 'cpb_weekly_reports')
+    ->condition('created', strtotime('-3 years'), '<=')
+    ->execute();
+  $storage_handler = \Drupal::entityTypeManager()->getStorage("node");
+  $entities = $storage_handler->loadMultiple($result);
+  $storage_handler->delete($entities);
+  $message = 'Old Weekly Reports Nodes deleted: ';
+  if ($entities) {
+    foreach ($entities as $nid => $oneNode) {
+      $message .= $nid . " ";
+    }
+  }
+  \Drupal::logger('cpb_node_prune')->notice($message);
+  /* Newsclips: Delete old nodes */
+  $result = \Drupal::entityQuery("node")
+    ->condition('status', 0)
+    ->condition('type', 'cpb_newsclips_links')
+    ->condition('created', strtotime('-1 years'), '<=')
+    ->execute();
+  $storage_handler = \Drupal::entityTypeManager()->getStorage("node");
+  $entities = $storage_handler->loadMultiple($result);
+  $storage_handler->delete($entities);
+  $message = 'Old Newsclips Nodes deleted: ';
+  if ($entities) {
+    foreach ($entities as $nid => $oneNode) {
+      $message .= $nid . " ";
+    }
+  }
+  \Drupal::logger('cpb_node_prune')->notice($message);
+}
+

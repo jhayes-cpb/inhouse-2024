@@ -1,0 +1,17 @@
+uuid: 7ac9b5ed-bba2-48f9-9fc4-51338ca7eac4
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'CPB Employee'
+type: cpb_employee
+description: 'Lists public information of each CPB employee.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

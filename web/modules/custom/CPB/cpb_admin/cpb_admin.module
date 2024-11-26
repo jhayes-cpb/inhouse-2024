@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains cpb_admin.module.php.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function cpb_admin_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the cpb_admin module.
+    case 'help.page.cpb_admin':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Admin area for CPB Custom Modules') . '</p>';
+      return $output;
+
+    default:
+  }
+}

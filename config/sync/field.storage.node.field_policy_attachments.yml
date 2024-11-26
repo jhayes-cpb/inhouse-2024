@@ -1,0 +1,23 @@
+uuid: e3548a85-8bef-4d86-81b8-ce3eba6dd6af
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_policy_attachments
+field_name: field_policy_attachments
+entity_type: node
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 10
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: 5a6b6c9c-b99a-497e-8fc2-00afc3ac8e16
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_cpb_office_number
+field_name: field_cpb_office_number
+entity_type: node
+type: string
+settings:
+  max_length: 5
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

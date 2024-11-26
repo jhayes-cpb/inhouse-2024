@@ -1,0 +1,36 @@
+uuid: 4f348986-5228-4766-bc0f-1aa3bf3da9b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.cpb_announcement.body
+    - field.field.node.cpb_announcement.field_cpb_date
+    - field.field.node.cpb_announcement.field_cpb_tags
+    - node.type.cpb_announcement
+  module:
+    - text
+    - user
+id: node.cpb_announcement.teaser
+targetEntityType: node
+bundle: cpb_announcement
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_cpb_date: true
+  field_cpb_tags: true
+  langcode: true
+  search_api_excerpt: true

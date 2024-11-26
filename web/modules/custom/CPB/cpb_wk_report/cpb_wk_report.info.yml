@@ -1,0 +1,6 @@
+name: 'CPB Weekly Report'
+description: 'CPB: Weekly Report Form Alter.'
+package: 'CPB'
+type: 'module'
+core: '8.x'
+core_version_requirement: ^8 || ^9 || ^10

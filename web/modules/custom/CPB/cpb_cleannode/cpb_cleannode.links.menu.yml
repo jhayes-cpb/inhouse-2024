@@ -1,0 +1,5 @@
+cpb_cleannode.admin_settings_form:
+  title: 'CPB Clean Node Settings'
+  parent: cpb_admin.main
+  description: 'Edit CPB Clean Node Module Settings'
+  route_name: 'cpb_cleannode.admin_settings_form'

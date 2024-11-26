@@ -1,0 +1,144 @@
+uuid: b6ba8d36-f3a2-4138-b2bd-58fcffc73f55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.cpb_employee.field_cpb_colleague_spotlight
+    - field.field.node.cpb_employee.field_cpb_department_2
+    - field.field.node.cpb_employee.field_cpb_employee_focus
+    - field.field.node.cpb_employee.field_cpb_employee_picture
+    - field.field.node.cpb_employee.field_cpb_office_number
+    - field.field.node.cpb_employee.field_department
+    - field.field.node.cpb_employee.field_email
+    - field.field.node.cpb_employee.field_first_name
+    - field.field.node.cpb_employee.field_phone_number
+    - field.field.node.cpb_employee.field_picture
+    - field.field.node.cpb_employee.field_title
+    - node.type.cpb_employee
+  module:
+    - media_library
+    - path
+    - scheduler
+id: node.cpb_employee.default
+targetEntityType: node
+bundle: cpb_employee
+mode: default
+content:
+  field_cpb_colleague_spotlight:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_cpb_department_2:
+    type: options_select
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_cpb_employee_focus:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_cpb_employee_picture:
+    type: media_library_widget
+    weight: 4
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_cpb_office_number:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_department:
+    type: options_buttons
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_email:
+    type: email_default
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_first_name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_phone_number:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 14
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_picture: true
+  promote: true
+  sticky: true
+  uid: true

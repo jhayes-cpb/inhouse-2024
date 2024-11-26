@@ -1,0 +1,57 @@
+uuid: e51b906d-69ee-4312-84d8-1b221c591374
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cpb_embedded_view
+    - node.type.top_links
+  module:
+    - viewfield
+id: node.top_links.field_cpb_embedded_view
+field_name: field_cpb_embedded_view
+entity_type: node
+bundle: top_links
+label: 'CPB Embedded View'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  force_default: false
+  allowed_views:
+    account_codes_test: account_codes_test
+    news_clips_view: news_clips_view
+    cpb_node_sidebar_content_block: cpb_node_sidebar_content_block
+    backup_of_phone_list: backup_of_phone_list
+    popular_items: popular_items
+    weekly_reports: weekly_reports
+    backup_of_news_clips_view: '0'
+    comment: '0'
+    content: '0'
+    cpb_inhouse_search: '0'
+    block_content: '0'
+    cpb_employee_focus: '0'
+    employee_rest_services: '0'
+    files: '0'
+    frontpage: '0'
+    media: '0'
+    media_library: '0'
+    user_admin_people: '0'
+    comments_recent: '0'
+    content_recent: '0'
+    scheduler_scheduled_content: '0'
+    taxonomy_term: '0'
+    test: '0'
+    watchdog: '0'
+    who_s_new: '0'
+    who_s_online: '0'
+  allowed_display_types:
+    block: block
+    page: page
+    default: '0'
+    feed: '0'
+    rest_export: '0'
+  handler: 'default:view'
+  handler_settings: {  }
+field_type: viewfield

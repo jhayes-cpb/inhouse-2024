@@ -1,0 +1,4 @@
+administer cpb cleannode module:
+  description: 'Perform administration tasks for the CPB custom Clean Node module.'
+  title: 'Administer CPB Clean Node Module'
+  restrict access: TRUE

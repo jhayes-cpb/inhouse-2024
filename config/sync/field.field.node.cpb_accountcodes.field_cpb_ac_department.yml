@@ -1,0 +1,21 @@
+uuid: 04575099-8b94-4d56-addb-f1dc49a6bef6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cpb_ac_department
+    - node.type.cpb_accountcodes
+  module:
+    - options
+id: node.cpb_accountcodes.field_cpb_ac_department
+field_name: field_cpb_ac_department
+entity_type: node
+bundle: cpb_accountcodes
+label: 'Department Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

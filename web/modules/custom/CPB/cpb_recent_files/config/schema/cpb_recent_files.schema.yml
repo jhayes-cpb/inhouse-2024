@@ -1,0 +1,18 @@
+cpb_recent_files.settings:
+  type: mapping
+  label: 'CPB Recent Files settings'
+  mapping:
+    cpb_recent_files_settings:
+      type: mapping
+      mapping:
+        block_title:
+          type: text
+          label: 'CPB Recent Files block title:'
+        num_files:
+          type: text
+          label: 'Number of files to display in the CPB Recent Files custom block:'
+block.settings.cpb_recent_files_block:
+  type: block_settings
+  label: 'CPB Recent Files block'
+  mapping:
+    cpb_recent_files_block_settings:

@@ -1,0 +1,28 @@
+uuid: 17a0395f-caf8-46e4-bb40-415741d54ec2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cpb_topics_ref
+    - node.type.cpb_newsclips_links
+    - taxonomy.vocabulary.cpb_newsclips_taxonomy
+id: node.cpb_newsclips_links.field_cpb_topics_ref
+field_name: field_cpb_topics_ref
+entity_type: node
+bundle: cpb_newsclips_links
+label: Topics
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      cpb_newsclips_taxonomy: cpb_newsclips_taxonomy
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

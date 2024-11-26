@@ -1,0 +1,4 @@
+administer cpb node prune module:
+  description: 'Perform administration tasks for the CPB custom Node Prune module.'
+  title: 'Administer CPB Node Prune Module'
+  restrict access: TRUE

@@ -1,0 +1,28 @@
+uuid: 88b7597f-7b3e-4922-b9f9-aba349afbdca
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.cpb_weekly_reports_text_formatting
+    - node.type.cpb_weekly_reports
+  module:
+    - exclude_node_title
+    - filter
+    - node
+    - system
+    - toolbar
+id: cpb_weekly_reports
+label: 'Weekly Reports'
+weight: 4
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'create cpb_weekly_reports content'
+  - 'delete own cpb_weekly_reports content'
+  - 'edit own cpb_weekly_reports content'
+  - 'revert cpb_weekly_reports revisions'
+  - 'use exclude node title'
+  - 'use text format cpb_weekly_reports_text_formatting'
+  - 'view cpb_weekly_reports revisions'
+  - 'view own unpublished content'
+  - 'view the administration theme'

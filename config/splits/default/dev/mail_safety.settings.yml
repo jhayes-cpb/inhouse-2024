@@ -1,0 +1,4 @@
+enabled: true
+send_mail_to_dashboard: true
+send_mail_to_default_mail: false
+default_mail_address: ''

@@ -1,0 +1,5 @@
+cpb_recent_files.settings:
+  title: 'CPB Recent Files settings'
+  description: 'Configure the number of files to show in the CPB Recent Files block'
+  parent: cpb_admin.main
+  route_name: 'cpb_recent_files.form'

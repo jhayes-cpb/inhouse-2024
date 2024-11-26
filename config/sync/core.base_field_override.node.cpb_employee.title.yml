@@ -1,0 +1,18 @@
+uuid: 47637d1f-caa5-4cd6-9974-83b6d1a34880
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.cpb_employee
+id: node.cpb_employee.title
+field_name: title
+entity_type: node
+bundle: cpb_employee
+label: 'Last name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

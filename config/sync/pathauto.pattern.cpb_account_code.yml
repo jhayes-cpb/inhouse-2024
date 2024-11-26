@@ -1,0 +1,22 @@
+uuid: a40aac72-8c75-43f0-8787-f15f2342ccbb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: cpb_account_code
+label: 'Account Code'
+type: 'canonical_entities:node'
+pattern: 'accountcode/[node:title]'
+selection_criteria:
+  406cfcfb-5135-4352-9eec-92c0e15a51e9:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 406cfcfb-5135-4352-9eec-92c0e15a51e9
+    context_mapping:
+      node: node
+    bundles:
+      cpb_accountcodes: cpb_accountcodes
+selection_logic: and
+weight: -5
+relationships: {  }

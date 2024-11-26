@@ -1,0 +1,21 @@
+name: 'CPB Recent Files'
+description: 'CPB: Provides a "Recently Modified Files" Block for PDF/XLS etc.'
+package: 'CPB'
+type: 'module'
+core: '8.x'
+core_version_requirement: ^8 || ^9 || ^10
+
+# field_my_file -- required field
+#
+# WARNING: Not strictly a dependency, but PLEASE know that this module won't work for
+# you unless you have a content type with a field called 'field_my_file'.
+#
+# Two ways to solve this in a generic way, given more time:
+#
+# 1. What I've always done in previous D7 modules, just pre-install this field in the
+# {my_module}.install file using hook_schema() or hook_install().
+#
+# 2. More elegant, less prescriptive: add a selector for this field property on the admin
+# config page. Also make sure that we write something in hook_install() to ensure the
+# module cannot be enabled without it.
+#

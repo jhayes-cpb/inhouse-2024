@@ -1,0 +1,31 @@
+uuid: bcd3a1ae-dedb-479e-8dd3-e6d70c9e66f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.employee_image.field_media_image_1
+    - image.style.thumbnail
+    - media.type.employee_image
+  module:
+    - image
+id: media.employee_image.media_library
+targetEntityType: media
+bundle: employee_image
+mode: media_library
+content:
+  field_media_image_1:
+    type: image_image
+    weight: -50
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  name: true
+  path: true
+  status: true
+  uid: true

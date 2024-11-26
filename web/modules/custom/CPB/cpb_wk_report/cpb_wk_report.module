@@ -1,0 +1,63 @@
+<?php
+
+/**
+ * @file
+ * Contains cpb_wk_report.module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter() on behalf of cpb_wk_report.module,
+ * for the "Add Content" form id node-cpb-weekly-reports-form.
+ * @see \Drupal\node\NodeForm method buildForm at /core/lib/Drupal/Core/Entity/EntityForm.php
+ */
+function cpb_wk_report_form_node_cpb_weekly_reports_form_alter(&$form, FormStateInterface $form_state) {
+  //kpr($form['field_cpb_department']);
+  //drupal_set_message('cpb_wk_report_node_cpb_weekly_reports_form_alter() executed.');
+
+  /*
+   * Attach our Javascript so that the user can ONLY pick Fridays
+   *
+   * Hints:
+   * https://www.drupal.org/node/2575207
+   * https://www.drupal.org/node/2274843
+   */
+
+  $form['#attached']['library'][] = 'cpb_wk_report/cpb_wk_report';
+
+  /* Hide the archival categories, but keep them in Content Type structure,
+      because we need them there for valid imports of old data during Migration.
+  */
+
+  $archivalDepartments = ["Radio", "Diversity and Innovation",
+  "Diversity and Television Content", "Human Resources", "American Archive",
+  "Spectrum White Paper", "Public Awareness Initiative",
+  "Content (Radio, Journalism, Diversity & TV)"];
+
+  $options = $form['field_cpb_department']['widget']['#options'];
+  $form['field_cpb_department']['widget']['#options'] = [];
+  foreach ($options as $key => $value) {
+    if (!in_array($value, $archivalDepartments) && substr($value,0,7) != 'Content') {
+      //dsm($value);
+      $form['field_cpb_department']['widget']['#options'][$key] = $value;
+    }
+  }
+  // Sort the departments alphabetically:
+  ksort($form['field_cpb_department']['widget']['#options']);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() on behalf of cpb_wk_report.module,
+ * for the "Edit Content" form id node-cpb-weekly-reports-edit-form.
+ *
+ * Note that the "Edit" form includes old, Archival Departments, hence the implementation
+ * of both specific hooks.
+ *
+ * @see \Drupal\node\NodeForm method buildForm at /core/lib/Drupal/Core/Entity/EntityForm.php
+ */
+function cpb_wk_report_form_node_cpb_weekly_reports_edit_form_alter(&$form, FormStateInterface $form_state) {
+  $form['#attached']['library'][] = 'cpb_wk_report/cpb_wk_report';
+  // Sort the departments alphabetically:
+  ksort($form['field_cpb_department']['widget']['#options']);
+}

@@ -1,0 +1,8 @@
+name: 'CPB Node Prune'
+description: 'CPB: Prune through nodes, removing items that are too old.'
+package: 'CPB'
+type: 'module'
+core: '8.x'
+core_version_requirement: ^8 || ^9 || ^10
+dependencies:
+  - 'scheduler'

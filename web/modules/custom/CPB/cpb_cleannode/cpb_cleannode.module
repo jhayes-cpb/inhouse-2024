@@ -1,0 +1,197 @@
+<?php
+/**
+ * @file
+ * CPB Module to replace all occurrences of "pubic" with "public" in all body, title, and
+ * long text fields.
+ *
+ * This is a re-write of the 7.x version from the live server.
+ *
+ * In the 7.x version, we leveraged the Event Log contrib module
+ * https://www.drupal.org/project/event_log for listing of changed nodes
+ * - which was not ported to D8.
+ * Replaced with promising sandbox https://www.drupal.org/sandbox/kumaratulesh/2846636
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+// use Drupal\cpb_admin\Services\CpbLoggerService;
+
+/**
+ * Implements hook_entity_presave().
+ */
+function cpb_cleannode_entity_presave(EntityInterface $entity) {
+  $totalCount = 0;
+  $count_body = 0;
+  $count_other = 0;
+  $count_title = 0;
+
+  $config = \Drupal::config('cpb_cleannode.settings');
+  $oldStringsConfig = !empty($config->get('strings_to_clean')) ? $config->get
+  ('strings_to_clean') : "empty";
+  $newStringsConfig = !empty($config->get('cleaned_strings')) ? $config->get
+  ('cleaned_strings') : "empty";
+  //\Drupal::service('cpb_cleannode.log_service')->logDebug($oldStringsConfig);
+  $oldStrings = $oldStringsConfig != 'empty' ? explode(",",
+    $oldStringsConfig) : ["pubic", "Pubic", "cbp", "CBP"];
+  $newStrings = $newStringsConfig != 'empty' ? explode(",",
+    $newStringsConfig) : ["public", "Public", "cpb", "CPB"];
+
+  if ( isset($entity->body) ) {
+    // Fix the body in all node types:
+    if ( isset($entity->body->value) ) {
+      $entity->body->value = str_replace($oldStrings, $newStrings, $entity->body->value, $count_body);
+    }
+  }
+  //field_cpb_sidebar_content
+  if ( isset($entity->field_cpb_sidebar_content) ) {
+    $entity->field_cpb_sidebar_content->value = str_replace($oldStrings, $newStrings, $entity->field_cpb_sidebar_content->value, $count_other);
+  }
+  //field_cpb_publication_name
+  if (isset($entity->field_cpb_publication_name) ) {
+    $entity->field_cpb_publication_name->value = str_replace($oldStrings, $newStrings, $entity->field_cpb_publication_name->value, $count_other);
+  }
+  if ( isset($entity->title) ) {
+    // Fix the title in all node types:
+    $entity->title = str_replace($oldStrings, $newStrings, $entity->title->value, $count_title);
+  }
+  $totalCount = $count_body > 0 ? $totalCount + $count_body : $totalCount;
+  $totalCount = $count_other > 0 ? $totalCount + $count_other : $totalCount;
+  $totalCount = $count_title > 0 ? $totalCount + $count_title : $totalCount;
+  if ($totalCount > 0) {
+    //cpb_cleannode_getcount($count);
+    $myCount = &drupal_static('cpb_cleannode_getcount');
+    $myCount = $totalCount;
+  }
+}
+
+/**
+ * Returns count of changes.
+ * @return integer
+ *   An integer count
+ */
+function cpb_cleannode_getcount($count = 0) {
+  $change_count = drupal_static(__FUNCTION__);
+  if ($change_count === NULL) {
+    $change_count = $count;
+  }
+  return $change_count;
+}
+
+/**
+ * Implements hook_node_insert().
+ */
+function cpb_cleannode_node_insert($node) {
+  $user = \Drupal::currentUser();
+  $thisCount = drupal_static('cpb_cleannode_getcount');
+  $log = array(
+    'type' => 'cpb_clean',
+    'operation' => 'insert',
+    'description' => t('%thisCount occurrence(s) of "pubic" or "CBP" cleaned in: %type: %title', array(
+      '%thisCount' => $thisCount,
+      '%type' => $node->getType(),
+      '%title' => $node->getTitle(),
+    )),
+    'ref_numeric' => $node->id(),
+    'ref_char' => $node->getTitle(),
+  );
+  if ( isset($thisCount) ) {
+    if ($thisCount > 0) {
+      $summary = "Insert: $thisCount occurrence(s) of \"pubic\" or \"CBP\" cleaned in: {$node->getType()}: {$node->getTitle()}";
+      $debugString = "Cleaned $thisCount instance(s): $summary";
+      \Drupal::service('cpb_cleannode.log_service')->logDebug($debugString);
+      $record = new StdClass();
+      $record->nid = $node->id();
+      $record->uid = $user->id();
+      $record->vid = $node->getRevisionId();
+      $record->type = $node->getType();
+      $record->title = $node->getTitle();
+      $record->num_cleaned = $thisCount;
+      $record->summary = $summary;
+      $record->stamp = time();
+      // Set the record
+      cpb_cleannode_set_record($record);
+    }
+  }
+}
+
+/**
+ * Implements hook_node_update().
+ */
+function cpb_cleannode_node_update($node) {
+  $user = \Drupal::currentUser();
+  $thisCount = drupal_static('cpb_cleannode_getcount');
+  $log = array(
+    'type' => 'cpb_clean',
+    'operation' => 'insert',
+    'description' => t('%thisCount occurrence(s) of "pubic" or "CBP" cleaned in: %type: %title', array(
+      '%thisCount' => $thisCount,
+      '%type' => $node->getType(),
+      '%title' => $node->getTitle(),
+    )),
+    'ref_numeric' => $node->id(),
+    'ref_char' => $node->getTitle(),
+  );
+  if ( isset($thisCount) ) {
+    if ($thisCount > 0) {
+      $summary = "Update: $thisCount occurrence(s) of \"pubic\" or \"CBP\" cleaned in: {$node->getType()}: {$node->getTitle()}";
+      $debugString = "Cleaned $thisCount instance(s): $summary";
+      \Drupal::service('cpb_cleannode.log_service')->logDebug($debugString);
+      $record = new StdClass();
+      $record->nid = $node->id();
+      $record->uid = $user->id();
+      $record->vid = $node->getRevisionId();
+      $record->type = $node->getType();
+      $record->title = $node->getTitle();
+      $record->num_cleaned = $thisCount;
+      $record->summary = $summary;
+      $record->stamp = time();
+      // Set the record
+      cpb_cleannode_set_record($record);
+    }
+  }
+}
+
+/**
+ * Get the record.
+ *
+ * @param int $nid
+ *   The node id.
+ * @param int $uid
+ *   The user id.
+ * @return mixed
+ *   The stdClass record, or FALSE if no record exists.
+ */
+function cpb_cleannode_get_record($nid, $vid, $uid)
+{
+    //SELECT * FROM cpb_cleannode_stats WHERE nid = $nid & uid = $uid
+    // TODO: Drupal Rector Notice: Please delete the following comment after you've made any necessary changes.
+    // You will need to use `\Drupal\core\Database\Database::getConnection()` if you do not yet have access to the container here.
+    $query = \Drupal::database()->select('cpb_cleannode_stats', 'c')
+        ->fields('c', array('nid', 'vid', 'uid', 'num_cleaned', 'summary', 'type', 'title', 'stamp'))
+        ->condition('nid', $nid)
+        ->condition('vid', $vid)
+        ->condition('uid', $uid);
+    $record = $query->execute()->fetch();
+    return $record;
+}
+
+/**
+ * Save a record.
+ *
+ * @param stdClass $record
+ *	 The record to save.
+ */
+function cpb_cleannode_set_record($record)
+{
+	//sanity check
+	if (!is_object($record)) {
+    $debugString = "We could not update information about this cleaning operation.";
+    \Drupal::service('cpb_cleannode.log_service')->logDebug($debugString);
+  }
+
+  //INSERT/UPDATE into cpb_cleannode_stats ('cid', 'vid', 'nid', 'num_cleaned', 'summary', 'type', 'title', 'uid', 'stamp') VALUES ('cid', 'vid', 'nid', 'num_cleaned', 'summary', 'type', 'title', 'uid', 'stamp')
+  \Drupal::database()->merge('cpb_cleannode_stats')
+		->key(array('nid' => $record->nid, 'vid' => $record->vid, 'uid' => $record->uid))
+    ->fields((array) $record)
+    ->execute();
+
+}

@@ -1,0 +1,6 @@
+name: 'CPB Clean Node'
+description: 'CPB: Replace all occurrences of "pubic" with "public" in all body, title, and long text fields.'
+package: 'CPB'
+type: 'module'
+core: '8.x'
+core_version_requirement: ^8 || ^9 || ^10

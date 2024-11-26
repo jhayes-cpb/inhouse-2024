@@ -1,0 +1,6 @@
+name: 'CPB Views Search Term'
+description: 'CPB: Define Views field for printing search term query value from search_api "search_api_fulltext" query param.'
+package: 'CPB'
+type: 'module'
+core: '8.x'
+core_version_requirement: ^8 || ^9 || ^10

@@ -1,0 +1,9 @@
+cpb_cleannode.admin_settings_form:
+  path: '/admin/config/cpb/cpb_cleannode'
+  defaults:
+    _form: '\Drupal\cpb_cleannode\Form\CPBCleanNodeAdminSettingsForm'
+    _title: 'CPB Clean Node Settings Form'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE

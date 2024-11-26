@@ -1,0 +1,58 @@
+<?php
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+use Symfony\Component\HttpFoundation\JsonResponse;
+
+function cpb_inhouse_preprocess_page(&$variables) {
+  if (!empty($variables['node'])) {
+    //Get node from $vars
+    $node = $variables['node'];
+
+    //Code only to node nid 23. Printer page
+    if ($node->nid->value == "23") {
+      $variables['#attached']['library'][] = 'cpb_inhouse/tabs';
+    }
+
+    //Code only to node nid 38869. Personnel Policies
+    if ($node->nid->value == "38869" || $node->nid->value == "38865" || $node->nid->value == "38910" || $node->nid->value == "38878"  ) {
+      $variables['#attached']['library'][] = 'cpb_inhouse/accordion';
+    }
+
+    //Code only to node nid 46636. Floor plan
+    if ($node->nid->value == "46636") {
+      $variables['#attached']['library'][] = 'cpb_inhouse/floorplan';
+    }
+
+   //Code only to node nid 11. Search forms
+      if ($node->nid->value == "11" ) {
+        $variables['#attached']['library'][] = 'cpb_inhouse/search-forms';
+    }
+   //Code only to node nid 38865. Search forms
+      if ($node->nid->value == "11" ) {
+        $variables['#attached']['library'][] = 'cpb_inhouse/mark';
+    }
+
+  }
+}
+
+function cpb_inhouse_preprocess_node(&$variables) {
+  // get a hold of the node object
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node && $node instanceof \Drupal\node\NodeInterface) { // check we have a node object.
+    if ($node->id() == 23) { // look for a specific node id.
+      //attach the library.
+      $variables['#attached']['library'][] = 'cpb_inhouse/printer-map';
+    }
+  }
+}
+
+
+function cpb_inhouse_form_alter(&$form, &$form_state, $form_id) {
+  if($form_id == "search_form") {
+     $form['#access'] = FALSE;
+  }
+}

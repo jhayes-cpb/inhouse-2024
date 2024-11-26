@@ -1,0 +1,23 @@
+uuid: b29fde36-d606-4a89-b017-557157f2b18f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.labor_law
+  module:
+    - text
+id: node.labor_law.body
+field_name: body
+entity_type: node
+bundle: labor_law
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,21 @@
+uuid: 2185cdab-71c5-47eb-b015-d5019b30bebc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_conf_room_howto_reserve
+    - node.type.conference_room
+  module:
+    - text
+id: node.conference_room.field_conf_room_howto_reserve
+field_name: field_conf_room_howto_reserve
+entity_type: node
+bundle: conference_room
+label: 'Reserve Room'
+description: 'Please describe how people can reserve this conference room'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

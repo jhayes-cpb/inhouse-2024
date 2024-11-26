@@ -1,0 +1,44 @@
+uuid: 521adef1-c5e4-4a8f-8603-9dcd438b37a9
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.cpb_employee.field_cpb_colleague_spotlight
+    - field.field.node.cpb_employee.field_cpb_department_2
+    - field.field.node.cpb_employee.field_cpb_employee_focus
+    - field.field.node.cpb_employee.field_cpb_employee_picture
+    - field.field.node.cpb_employee.field_cpb_office_number
+    - field.field.node.cpb_employee.field_department
+    - field.field.node.cpb_employee.field_email
+    - field.field.node.cpb_employee.field_first_name
+    - field.field.node.cpb_employee.field_phone_number
+    - field.field.node.cpb_employee.field_picture
+    - field.field.node.cpb_employee.field_title
+    - node.type.cpb_employee
+  module:
+    - user
+id: node.cpb_employee.teaser
+targetEntityType: node
+bundle: cpb_employee
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_cpb_colleague_spotlight: true
+  field_cpb_department_2: true
+  field_cpb_employee_focus: true
+  field_cpb_employee_picture: true
+  field_cpb_office_number: true
+  field_department: true
+  field_email: true
+  field_first_name: true
+  field_phone_number: true
+  field_picture: true
+  field_title: true
+  langcode: true
+  search_api_excerpt: true
