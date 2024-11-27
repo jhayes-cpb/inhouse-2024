@@ -1,8 +1,0 @@
-uuid: ba07ff01-1b15-4132-962b-8c4523120fd7
-langcode: en
-status: true
-dependencies: {  }
-name: Policy
-vid: policy
-description: 'Policies for policy sections to belong to'
-weight: 0

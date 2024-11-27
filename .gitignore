@@ -7,6 +7,10 @@
 /web/profiles/contrib/
 /web/libraries/
 
+# Old setup files preserved for potential reflection
+/stash
+/web/core_compare
+
 # Ignore sensitive information
 /web/sites/README.txt
 /web/sites/default/default.services.yml

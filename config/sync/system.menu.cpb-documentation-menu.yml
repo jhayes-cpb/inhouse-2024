@@ -1,8 +1,0 @@
-uuid: 8cb2ff02-1748-4400-a0a6-33c4ba23b8cb
-langcode: en
-status: true
-dependencies: {  }
-id: cpb-documentation-menu
-label: 'Documentation Menu'
-description: 'Documentation Menu for IT'
-locked: false

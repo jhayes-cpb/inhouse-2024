@@ -1,7 +1,0 @@
-role:
-  anonymous: default
-  authenticated: default
-  administrator: default
-  hr: hr-editor
-  cpb_weekly_reports: weekly-reports-editor
-  cpb_news_clips: news-clip-editor

@@ -1,8 +1,0 @@
-uuid: 2d0de194-c287-4a42-b44e-d4c7a723a336
-langcode: en
-status: true
-dependencies: {  }
-id: labor-law
-label: 'Labor Law'
-description: 'Used Only for the Labor Law Content Type'
-locked: false

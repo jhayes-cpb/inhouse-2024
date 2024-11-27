@@ -1,8 +1,0 @@
-uuid: 53a227b1-d4b4-4db3-b428-9d52f884d313
-langcode: en
-status: true
-dependencies: {  }
-name: 'Media Directories'
-vid: media_directories
-description: ''
-weight: 0

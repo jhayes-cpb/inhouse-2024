@@ -1,6 +1,0 @@
-uuid: 23d5be18-f542-485c-be85-a757ba5181e5
-langcode: en
-status: true
-dependencies: {  }
-id: news-clip-editor
-label: 'News Clip Editor'

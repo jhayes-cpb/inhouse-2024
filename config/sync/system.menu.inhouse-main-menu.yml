@@ -1,8 +1,0 @@
-uuid: fd76db5e-7d58-48b0-b7cd-857494df12f7
-langcode: en
-status: true
-dependencies: {  }
-id: inhouse-main-menu
-label: 'Inhouse Main Menu'
-description: '2022 refresh menu'
-locked: false
