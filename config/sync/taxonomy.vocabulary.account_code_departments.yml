@@ -1,0 +1,9 @@
+uuid: 3c4733f6-b2e4-4e8c-9615-1d1e47f9d2e6
+langcode: en
+status: true
+dependencies: {  }
+name: 'Account Code Departments'
+vid: account_code_departments
+description: 'Department Labels for the Account Codes for Finance'
+weight: 0
+new_revision: false

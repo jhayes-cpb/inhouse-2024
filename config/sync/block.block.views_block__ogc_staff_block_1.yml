@@ -1,0 +1,29 @@
+uuid: c77cd4b8-22a5-42f2-9e76-d308bc146600
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.ogc_staff
+  module:
+    - system
+    - views
+  theme:
+    - cpb_inhouse
+id: views_block__ogc_staff_block_1
+theme: cpb_inhouse
+region: content
+weight: -10
+provider: null
+plugin: 'views_block:ogc_staff-block_1'
+settings:
+  id: 'views_block:ogc_staff-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/81166

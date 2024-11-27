@@ -1,0 +1,9 @@
+uuid: 2850e08d-f679-4966-90a5-bb255ac035d9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Conference Rooms'
+vid: conf_room_features
+description: 'Feature tags for conference rooms'
+weight: 0
+new_revision: false

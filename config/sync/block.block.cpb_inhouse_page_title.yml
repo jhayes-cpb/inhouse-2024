@@ -1,0 +1,20 @@
+uuid: e656b331-36f7-41bd-b6de-8ef05414276a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - cpb_inhouse
+_core:
+  default_config_hash: 1TQP4b3ZnlzvIH9bj6cpCz_SyUHdJjLQkZnHpikjjhw
+id: cpb_inhouse_page_title
+theme: cpb_inhouse
+region: header
+weight: -11
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

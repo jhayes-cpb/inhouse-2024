@@ -1,0 +1,34 @@
+uuid: 63b5d2fe-4ce4-47e5-9ecd-0cd83b2b4c39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cpb_employee_picture
+    - media.type.employee_image
+    - node.type.cpb_employee
+  content:
+    - 'media:employee_image:e46733b7-1b1f-4a9b-b875-57c56712be84'
+id: node.cpb_employee.field_cpb_employee_picture
+field_name: field_cpb_employee_picture
+entity_type: node
+bundle: cpb_employee
+label: 'Employee Picture'
+description: "Please use a 300px width x 400px height aspect ratio for your image.<br>\r\nPlease use only a JPG or PNG file<br>\r\nIf you have a picture to upload, please delete the \"No Image Yet\" placeholder, or the existing image, and replace it with your new one."
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: e46733b7-1b1f-4a9b-b875-57c56712be84
+    weight: 0
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      employee_image: employee_image
+    sort:
+      field: name
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

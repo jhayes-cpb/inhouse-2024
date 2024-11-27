@@ -1,0 +1,19 @@
+uuid: 09d5c431-7250-4cca-a09a-1f29c257ac0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cpb_office_number
+    - node.type.cpb_employee
+id: node.cpb_employee.field_cpb_office_number
+field_name: field_cpb_office_number
+entity_type: node
+bundle: cpb_employee
+label: 'Office Number'
+description: 'If the Office number has a letter, use lowercase for most departments. Test to ensure it works with the map. Some departments need uppercase, such as OIG.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

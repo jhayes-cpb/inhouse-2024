@@ -1,0 +1,32 @@
+uuid: dbf97f3f-eaca-4c9a-b69d-81dc1d92b98a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.disqualified_stations.field_disq_station_city
+    - field.field.node.disqualified_stations.field_disq_station_disq_date
+    - field.field.node.disqualified_stations.field_disq_station_licensee
+    - field.field.node.disqualified_stations.field_disq_station_note
+    - field.field.node.disqualified_stations.field_state
+    - node.type.disqualified_stations
+  module:
+    - user
+id: node.disqualified_stations.teaser
+targetEntityType: node
+bundle: disqualified_stations
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_disq_station_city: true
+  field_disq_station_disq_date: true
+  field_disq_station_licensee: true
+  field_disq_station_note: true
+  field_state: true
+  langcode: true
+  search_api_excerpt: true

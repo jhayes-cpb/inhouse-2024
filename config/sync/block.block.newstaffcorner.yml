@@ -1,0 +1,30 @@
+uuid: 46a87bbf-3dcb-41f5-bc31-10a653037d41
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a97d7ebb-515a-414f-bc00-5c5d8ccc4cbc'
+  module:
+    - block_content
+    - system
+  theme:
+    - cpb_inhouse
+id: newstaffcorner
+theme: cpb_inhouse
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:a97d7ebb-515a-414f-bc00-5c5d8ccc4cbc'
+settings:
+  id: 'block_content:a97d7ebb-515a-414f-bc00-5c5d8ccc4cbc'
+  label: 'New Staff Corner '
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /staff/new

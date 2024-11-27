@@ -1,0 +1,21 @@
+uuid: bc2138b1-e1ec-4fcc-bf74-79822926180a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cpb_department
+    - node.type.cpb_weekly_reports
+  module:
+    - options
+id: node.cpb_weekly_reports.field_cpb_department
+field_name: field_cpb_department
+entity_type: node
+bundle: cpb_weekly_reports
+label: Department
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

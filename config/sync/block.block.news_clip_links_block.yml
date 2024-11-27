@@ -1,0 +1,29 @@
+uuid: 93b769a4-813f-4ba4-88df-713921f5bd31
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.inhouse_newsclip_links
+  module:
+    - system
+    - views
+  theme:
+    - cpb_inhouse
+id: news_clip_links_block
+theme: cpb_inhouse
+region: content
+weight: -16
+provider: null
+plugin: 'views_block:inhouse_newsclip_links-block_1'
+settings:
+  id: 'views_block:inhouse_newsclip_links-block_1'
+  label: 'Daily News Clips'
+  label_display: visible
+  provider: views
+  views_label: 'Daily News Clips'
+  items_per_page: '3'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

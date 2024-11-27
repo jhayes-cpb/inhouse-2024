@@ -1,0 +1,14 @@
+uuid: 4d2ac040-34b7-4fd9-9e09-7fba429744f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.cpb_news_clips
+  module:
+    - user
+id: user_remove_role_action.cpb_news_clips
+label: 'Remove the News Clips role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: cpb_news_clips

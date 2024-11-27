@@ -1,0 +1,9 @@
+uuid: b8b803db-ce81-4fc7-9391-7e01e59e0695
+langcode: en
+status: true
+dependencies: {  }
+name: Forms
+vid: form_tags
+description: 'Tags for types of forms'
+weight: 0
+new_revision: false

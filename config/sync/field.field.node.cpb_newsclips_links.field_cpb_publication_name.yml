@@ -1,0 +1,19 @@
+uuid: 25196394-12e7-4f34-b2c3-30c2872e8ccf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cpb_publication_name
+    - node.type.cpb_newsclips_links
+id: node.cpb_newsclips_links.field_cpb_publication_name
+field_name: field_cpb_publication_name
+entity_type: node
+bundle: cpb_newsclips_links
+label: Publication
+description: 'Name of the website publishing the article. Ex. NPR, Current, New York Times, etc.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

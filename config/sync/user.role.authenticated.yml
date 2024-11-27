@@ -1,0 +1,30 @@
+uuid: 02921f66-ecfa-4661-b051-d4f9faaf0143
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - contact
+    - exclude_node_title
+    - file
+    - matomo
+    - media
+    - shortcut
+    - system
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'delete own files'
+  - 'opt-in or out of matomo tracking'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'use exclude node title'
+  - 'view media'

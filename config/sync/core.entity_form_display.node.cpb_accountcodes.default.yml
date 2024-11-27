@@ -1,0 +1,131 @@
+uuid: fe0a9eaf-6fe4-4ca5-ace1-c8f2277c7d22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.cpb_accountcodes.field_cpb_ac_account_description
+    - field.field.node.cpb_accountcodes.field_cpb_ac_account_number
+    - field.field.node.cpb_accountcodes.field_cpb_ac_account_segment_2
+    - field.field.node.cpb_accountcodes.field_cpb_ac_department
+    - field.field.node.cpb_accountcodes.field_cpb_ac_department_number
+    - field.field.node.cpb_accountcodes.field_cpb_ac_funding_source
+    - field.field.node.cpb_accountcodes.field_field_cpb_ac_dept_tax
+    - node.type.cpb_accountcodes
+  module:
+    - path
+id: node.cpb_accountcodes.default
+targetEntityType: node
+bundle: cpb_accountcodes
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_cpb_ac_account_description:
+    type: string_textfield
+    weight: 16
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_cpb_ac_account_number:
+    type: string_textfield
+    weight: 15
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_cpb_ac_account_segment_2:
+    type: number
+    weight: 14
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_cpb_ac_department:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_cpb_ac_department_number:
+    type: number
+    weight: 13
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_cpb_ac_funding_source:
+    type: string_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_field_cpb_ac_dept_tax:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

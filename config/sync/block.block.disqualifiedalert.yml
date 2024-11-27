@@ -1,0 +1,31 @@
+uuid: 1fa19f62-390e-4f49-a952-a91edbd4eb14
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b8e9e143-25ce-4ca4-860d-1fb5abdd3f27'
+  module:
+    - block_content
+    - system
+  theme:
+    - cpb_inhouse
+id: disqualifiedalert
+theme: cpb_inhouse
+region: sidebar_second
+weight: -16
+provider: null
+plugin: 'block_content:b8e9e143-25ce-4ca4-860d-1fb5abdd3f27'
+settings:
+  id: 'block_content:b8e9e143-25ce-4ca4-860d-1fb5abdd3f27'
+  label: 'Disqualified alert'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

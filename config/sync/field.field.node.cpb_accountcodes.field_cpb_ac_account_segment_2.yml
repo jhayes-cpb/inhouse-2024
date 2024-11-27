@@ -1,0 +1,23 @@
+uuid: c4f1bf38-9bae-455a-9897-2803ea227263
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cpb_ac_account_segment_2
+    - node.type.cpb_accountcodes
+id: node.cpb_accountcodes.field_cpb_ac_account_segment_2
+field_name: field_cpb_ac_account_segment_2
+entity_type: node
+bundle: cpb_accountcodes
+label: 'Account Segment 2'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 100000
+  prefix: ''
+  suffix: ''
+field_type: integer

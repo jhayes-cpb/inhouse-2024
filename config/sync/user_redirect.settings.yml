@@ -1,0 +1,32 @@
+login:
+  authenticated:
+    redirect_url: ''
+    weight: '-10'
+  administrator:
+    redirect_url: ''
+    weight: '-10'
+  hr:
+    redirect_url: /node/add/cpb_employee
+    weight: '-10'
+  cpb_weekly_reports:
+    redirect_url: /node/add/cpb_weekly_reports
+    weight: '-10'
+  cpb_news_clips:
+    redirect_url: /node/add/cpb_newsclips_links
+    weight: '-10'
+logout:
+  authenticated:
+    redirect_url: ''
+    weight: '-10'
+  administrator:
+    redirect_url: ''
+    weight: '-10'
+  hr:
+    redirect_url: ''
+    weight: '-10'
+  cpb_weekly_reports:
+    redirect_url: ''
+    weight: '-10'
+  cpb_news_clips:
+    redirect_url: ''
+    weight: '-10'

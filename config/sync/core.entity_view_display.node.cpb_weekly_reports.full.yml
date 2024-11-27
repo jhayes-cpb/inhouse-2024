@@ -1,0 +1,31 @@
+uuid: bc6e2e48-f4f4-4fe6-acaf-f8d7b614f3d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.cpb_weekly_reports.body
+    - field.field.node.cpb_weekly_reports.field_cpb_date
+    - field.field.node.cpb_weekly_reports.field_cpb_department
+    - node.type.cpb_weekly_reports
+  module:
+    - text
+    - user
+id: node.cpb_weekly_reports.full
+targetEntityType: node
+bundle: cpb_weekly_reports
+mode: full
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_cpb_date: true
+  field_cpb_department: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

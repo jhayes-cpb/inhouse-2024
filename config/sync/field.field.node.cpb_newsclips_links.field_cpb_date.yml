@@ -1,0 +1,21 @@
+uuid: bc037385-3cb6-49ce-9273-8a1903346b3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cpb_date
+    - node.type.cpb_newsclips_links
+  module:
+    - datetime
+id: node.cpb_newsclips_links.field_cpb_date
+field_name: field_cpb_date
+entity_type: node
+bundle: cpb_newsclips_links
+label: Date
+description: "CPB's publication date"
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

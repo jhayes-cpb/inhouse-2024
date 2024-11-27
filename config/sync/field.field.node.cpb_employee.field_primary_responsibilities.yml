@@ -1,0 +1,21 @@
+uuid: 8a1f877f-e222-4f22-b13b-5cbe39ae237e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_primary_responsibilities
+    - node.type.cpb_employee
+  module:
+    - text
+id: node.cpb_employee.field_primary_responsibilities
+field_name: field_primary_responsibilities
+entity_type: node
+bundle: cpb_employee
+label: 'Primary Responsibilities'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

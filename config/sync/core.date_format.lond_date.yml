@@ -1,0 +1,8 @@
+uuid: 3092a944-c10f-4e84-b361-c0868b43fdd2
+langcode: en
+status: true
+dependencies: {  }
+id: lond_date
+label: 'Lond Date'
+locked: false
+pattern: 'F j, Y'

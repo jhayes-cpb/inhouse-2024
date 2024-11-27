@@ -1,0 +1,19 @@
+uuid: 405f8536-7eb1-494b-b68c-f88c57a93de0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pronouns
+    - node.type.cpb_employee
+id: node.cpb_employee.field_pronouns
+field_name: field_pronouns
+entity_type: node
+bundle: cpb_employee
+label: Pronouns
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

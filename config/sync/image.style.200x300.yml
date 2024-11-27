@@ -1,0 +1,15 @@
+uuid: 461276d4-d4ce-411b-89da-18cad814aa8f
+langcode: en
+status: true
+dependencies: {  }
+name: 200x300
+label: 200x300
+effects:
+  fa394161-7aca-4431-81e5-a76c3fe8d454:
+    uuid: fa394161-7aca-4431-81e5-a76c3fe8d454
+    id: image_scale
+    weight: 1
+    data:
+      width: 200
+      height: 300
+      upscale: false

@@ -1,0 +1,32 @@
+uuid: 95aea106-698b-45dd-94cf-1b2a058f6caa
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.cpb_documentation.body
+    - node.type.cpb_documentation
+  module:
+    - text
+    - user
+id: node.cpb_documentation.teaser
+targetEntityType: node
+bundle: cpb_documentation
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

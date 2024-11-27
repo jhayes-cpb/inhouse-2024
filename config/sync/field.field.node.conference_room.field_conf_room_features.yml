@@ -1,0 +1,29 @@
+uuid: 34f3a72b-2f96-4c25-bc98-8f768c6d5154
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_conf_room_features
+    - node.type.conference_room
+    - taxonomy.vocabulary.conf_room_features
+id: node.conference_room.field_conf_room_features
+field_name: field_conf_room_features
+entity_type: node
+bundle: conference_room
+label: Features
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      conf_room_features: conf_room_features
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

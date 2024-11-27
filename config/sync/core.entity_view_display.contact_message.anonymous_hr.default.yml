@@ -1,0 +1,51 @@
+uuid: 1f88a1d0-47ea-47ee-91ed-a73d823e6c35
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.anonymous_hr
+  module:
+    - ds
+id: contact_message.anonymous_hr.default
+targetEntityType: contact_message
+bundle: anonymous_hr
+mode: default
+content:
+  message:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: Message
+            lbw: false
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: false
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            fi-def-at: false
+            prefix: 'Use this form to send anonymous questions or comments to HR.'
+            suffix: ''
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,11 @@
+uuid: e16142ef-09eb-44d9-9ac1-70b5a1417ca6
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.account_code_departments
+id: taxonomy_term.account_code_departments
+target_entity_type_id: taxonomy_term
+target_bundle: account_code_departments
+default_langcode: site_default
+language_alterable: false

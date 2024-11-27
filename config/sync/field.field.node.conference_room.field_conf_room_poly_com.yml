@@ -1,0 +1,19 @@
+uuid: 01a8012c-f1d7-4368-ab36-bd32b8d89971
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_conf_room_poly_com
+    - node.type.conference_room
+id: node.conference_room.field_conf_room_poly_com
+field_name: field_conf_room_poly_com
+entity_type: node
+bundle: conference_room
+label: Polycom
+description: 'Last 4 digits of the polycom number'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: 9f453e24-8323-4840-a75f-97e7677c1736
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.cpb_announcement
+  module:
+    - text
+id: node.cpb_announcement.body
+field_name: body
+entity_type: node
+bundle: cpb_announcement
+label: 'Announcement Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

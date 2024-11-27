@@ -1,0 +1,23 @@
+uuid: c69879d3-c334-4302-baae-d1aa5070f57e
+langcode: en
+status: true
+dependencies: {  }
+name: newsclip_frontpage
+label: 'Newsclip frontpage'
+effects:
+  4aa62ecb-6918-4d60-a701-447a13a83bf7:
+    uuid: 4aa62ecb-6918-4d60-a701-447a13a83bf7
+    id: image_scale
+    weight: 1
+    data:
+      width: 640
+      height: null
+      upscale: true
+  21a7ae7b-4557-45a1-87d6-aec06f03737a:
+    uuid: 21a7ae7b-4557-45a1-87d6-aec06f03737a
+    id: image_crop
+    weight: 2
+    data:
+      width: 640
+      height: 320
+      anchor: center-top

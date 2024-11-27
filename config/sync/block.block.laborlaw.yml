@@ -1,0 +1,33 @@
+uuid: f7847895-b306-4eb1-a80b-c9c079a33f49
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.labor-law
+  module:
+    - node
+    - system
+  theme:
+    - cpb_inhouse
+id: laborlaw
+theme: cpb_inhouse
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:labor-law'
+settings:
+  id: 'system_menu_block:labor-law'
+  label: Navigation
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      labor_law: labor_law

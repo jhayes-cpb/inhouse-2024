@@ -1,0 +1,15 @@
+uuid: 128ad6d7-3eb1-4184-9bad-071d175c0ef8
+langcode: en
+status: true
+dependencies: {  }
+name: smaller_thumbnail
+label: 'Smaller Thumbnail 75x75'
+effects:
+  4eb58a89-7688-4394-a6a6-a28d2c0899e0:
+    uuid: 4eb58a89-7688-4394-a6a6-a28d2c0899e0
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 75
+      height: 75
+      anchor: center-center

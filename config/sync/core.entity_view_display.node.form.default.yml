@@ -1,0 +1,107 @@
+uuid: e19d49a3-cf3a-47a8-b6e1-91cc4ae37e71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.form.body
+    - field.field.node.form.field_form_file
+    - field.field.node.form.field_form_last_revised
+    - field.field.node.form.field_form_tags
+    - node.type.form
+  module:
+    - datetime
+    - ds
+    - file
+    - text
+    - user
+id: node.form.default
+targetEntityType: node
+bundle: form
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_form_file:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: 'Last Reviewed by CPB'
+            lbw: false
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: false
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 0
+    region: content
+  field_form_last_revised:
+    type: datetime_time_ago
+    label: above
+    settings:
+      future_format: '@interval hence'
+      past_format: '@interval ago'
+      granularity: 2
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: 'Last Revised by CPB'
+            lbw: false
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: false
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 1
+    region: content
+hidden:
+  field_form_tags: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

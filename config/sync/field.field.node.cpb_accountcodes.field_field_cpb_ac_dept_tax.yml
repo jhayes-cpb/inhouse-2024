@@ -1,0 +1,29 @@
+uuid: 2e15511d-0a08-472a-a20d-a1d9fcce2303
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_field_cpb_ac_dept_tax
+    - node.type.cpb_accountcodes
+    - taxonomy.vocabulary.account_code_departments
+id: node.cpb_accountcodes.field_field_cpb_ac_dept_tax
+field_name: field_field_cpb_ac_dept_tax
+entity_type: node
+bundle: cpb_accountcodes
+label: 'Department Tag'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      account_code_departments: account_code_departments
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

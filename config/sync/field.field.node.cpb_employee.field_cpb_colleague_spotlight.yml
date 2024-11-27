@@ -1,0 +1,23 @@
+uuid: 5d86d6d8-9f6b-4946-87d7-9641525045a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cpb_colleague_spotlight
+    - node.type.cpb_employee
+id: node.cpb_employee.field_cpb_colleague_spotlight
+field_name: field_cpb_colleague_spotlight
+entity_type: node
+bundle: cpb_employee
+label: 'CPB Colleague Spotlight'
+description: 'Whether or not the person has been featured in the CPB Colleague Spotlight'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

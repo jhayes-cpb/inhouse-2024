@@ -1,0 +1,19 @@
+uuid: 0e760a7c-136b-47df-b1eb-d8c038ee8c3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_disq_station_note
+    - node.type.disqualified_stations
+id: node.disqualified_stations.field_disq_station_note
+field_name: field_disq_station_note
+entity_type: node
+bundle: disqualified_stations
+label: Note
+description: 'Do not post the reason for removal on the In-House Page unless approved by a Radio or TV Policy Authority'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

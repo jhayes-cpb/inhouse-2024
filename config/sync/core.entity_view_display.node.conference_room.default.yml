@@ -1,0 +1,142 @@
+uuid: fb6da389-6d2e-43e7-a83d-7cd92a811112
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.conference_room.body
+    - field.field.node.conference_room.field_conf_room_features
+    - field.field.node.conference_room.field_conf_room_floor_plan
+    - field.field.node.conference_room.field_conf_room_highlighted_map
+    - field.field.node.conference_room.field_conf_room_howto_reserve
+    - field.field.node.conference_room.field_conf_room_location
+    - field.field.node.conference_room.field_conf_room_phone_num
+    - field.field.node.conference_room.field_conf_room_poly_com
+    - field.field.node.conference_room.field_conf_room_profile_img
+    - field.field.node.conference_room.field_conf_room_size
+    - field.field.node.conference_room.field_conf_room_table_seating
+    - node.type.conference_room
+  module:
+    - options
+    - svg_image
+    - text
+    - user
+id: node.conference_room.default
+targetEntityType: node
+bundle: conference_room
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_conf_room_features:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_conf_room_floor_plan:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_conf_room_highlighted_map:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_conf_room_howto_reserve:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_conf_room_location:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_conf_room_phone_num:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_conf_room_poly_com:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_conf_room_profile_img:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_conf_room_size:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_conf_room_table_seating:
+    type: number_integer
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

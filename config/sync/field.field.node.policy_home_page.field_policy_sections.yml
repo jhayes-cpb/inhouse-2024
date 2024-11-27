@@ -1,0 +1,31 @@
+uuid: f01d5973-05ee-4200-b856-24e48b562e0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_policy_sections
+    - node.type.policy_home_page
+    - paragraphs.paragraphs_type.policy_section
+  module:
+    - entity_reference_revisions
+id: node.policy_home_page.field_policy_sections
+field_name: field_policy_sections
+entity_type: node
+bundle: policy_home_page
+label: 'Policy Sections'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      policy_section: policy_section
+    negate: 0
+    target_bundles_drag_drop:
+      policy_section:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

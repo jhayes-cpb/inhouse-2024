@@ -1,0 +1,29 @@
+uuid: 83d04f4b-dbde-435a-a618-bfb31adcb1e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_form_tags
+    - node.type.form
+    - taxonomy.vocabulary.form_tags
+id: node.form.field_form_tags
+field_name: field_form_tags
+entity_type: node
+bundle: form
+label: 'Form Tags'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      form_tags: form_tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

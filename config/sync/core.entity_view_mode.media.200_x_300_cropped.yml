@@ -1,0 +1,11 @@
+uuid: e70e2bb3-a7bf-4805-a790-1fe44eeddc03
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.200_x_300_cropped
+label: '200 x 300 cropped'
+description: ''
+targetEntityType: media
+cache: true

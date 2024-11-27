@@ -1,0 +1,14 @@
+uuid: e71a5b46-9658-466c-8d88-532d138f5d94
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.cpb_news_clips
+  module:
+    - user
+id: user_add_role_action.cpb_news_clips
+label: 'Add the News Clips role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: cpb_news_clips

@@ -1,0 +1,11 @@
+uuid: ecb6a1cd-9dd7-45bc-8654-84acf2b409a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.conf_room_features
+id: taxonomy_term.conf_room_features
+target_entity_type_id: taxonomy_term
+target_bundle: conf_room_features
+default_langcode: site_default
+language_alterable: false

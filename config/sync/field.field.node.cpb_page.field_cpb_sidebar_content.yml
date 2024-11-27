@@ -1,0 +1,21 @@
+uuid: 0b28d46c-aa79-4515-8cde-9f83a36571cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cpb_sidebar_content
+    - node.type.cpb_page
+  module:
+    - text
+id: node.cpb_page.field_cpb_sidebar_content
+field_name: field_cpb_sidebar_content
+entity_type: node
+bundle: cpb_page
+label: 'CPB Sidebar Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

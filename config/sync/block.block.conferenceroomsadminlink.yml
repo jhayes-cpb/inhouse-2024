@@ -1,0 +1,39 @@
+uuid: e8acaaca-2450-4861-ab35-802c293dcf94
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:23f3e574-f630-4e5c-8d9d-6e73531cd938'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - cpb_inhouse
+id: conferenceroomsadminlink
+theme: cpb_inhouse
+region: sidebar_second
+weight: -9
+provider: null
+plugin: 'block_content:23f3e574-f630-4e5c-8d9d-6e73531cd938'
+settings:
+  id: 'block_content:23f3e574-f630-4e5c-8d9d-6e73531cd938'
+  label: 'Conference Rooms Admin Link'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: officeservices/conferenceroom
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      hr: hr

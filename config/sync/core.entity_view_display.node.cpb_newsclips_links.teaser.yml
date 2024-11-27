@@ -1,0 +1,30 @@
+uuid: b19ad14f-78f5-424d-8b54-dbb3765777da
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.cpb_newsclips_links.field_cpb_date
+    - field.field.node.cpb_newsclips_links.field_cpb_publication_name
+    - field.field.node.cpb_newsclips_links.field_cpb_topics_ref
+    - field.field.node.cpb_newsclips_links.field_cpb_url
+    - node.type.cpb_newsclips_links
+  module:
+    - user
+id: node.cpb_newsclips_links.teaser
+targetEntityType: node
+bundle: cpb_newsclips_links
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_cpb_date: true
+  field_cpb_publication_name: true
+  field_cpb_topics_ref: true
+  field_cpb_url: true
+  langcode: true
+  search_api_excerpt: true

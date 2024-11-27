@@ -1,0 +1,75 @@
+uuid: 6dc83ca4-680f-4f91-9a10-43e2538d0f86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.cpb_page.body
+    - field.field.node.cpb_page.field_cpb_file
+    - field.field.node.cpb_page.field_cpb_sidebar_content
+    - field.field.node.cpb_page.field_cpb_tags
+    - field.field.node.cpb_page.field_related_files
+    - node.type.cpb_page
+  module:
+    - ds
+    - text
+    - user
+id: node.cpb_page.default
+targetEntityType: node
+bundle: cpb_page
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_related_files:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            lbw: true
+            lbw-el: h3
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: false
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_cpb_file: true
+  field_cpb_sidebar_content: true
+  field_cpb_tags: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,19 @@
+uuid: 08daca6f-682f-40ef-b271-3e4ce70c74cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cpb_ac_account_description
+    - node.type.cpb_accountcodes
+id: node.cpb_accountcodes.field_cpb_ac_account_description
+field_name: field_cpb_ac_account_description
+entity_type: node
+bundle: cpb_accountcodes
+label: 'Account Description'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

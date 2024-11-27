@@ -1,0 +1,291 @@
+uuid: 4bc35974-5b55-4ba7-a02d-afc8b3ed800a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.cpb_employee.field_cpb_colleague_spotlight
+    - field.field.node.cpb_employee.field_cpb_employee_focus
+    - field.field.node.cpb_employee.field_cpb_employee_picture
+    - field.field.node.cpb_employee.field_cpb_office_number
+    - field.field.node.cpb_employee.field_department
+    - field.field.node.cpb_employee.field_email
+    - field.field.node.cpb_employee.field_first_name
+    - field.field.node.cpb_employee.field_phone_number
+    - field.field.node.cpb_employee.field_picture
+    - field.field.node.cpb_employee.field_primary_responsibilities
+    - field.field.node.cpb_employee.field_pronouns
+    - field.field.node.cpb_employee.field_title
+    - node.type.cpb_employee
+  module:
+    - ds
+    - rest_views
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col_fluid
+      library: ds/ds_2col_fluid
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      left:
+        - field_cpb_employee_picture
+      right:
+        - 'dynamic_token_field:node-full_name'
+        - field_pronouns
+        - field_title
+        - field_department
+        - field_cpb_office_number
+        - field_email
+        - field_phone_number
+        - field_preferred_communication
+    fields:
+      'dynamic_token_field:node-full_name':
+        plugin_id: 'dynamic_token_field:node-full_name'
+        weight: 1
+        label: hidden
+        formatter: default
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            lbw: false
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: true
+            ow-el: h2
+            ow-cl: ''
+            ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            fi-def-at: false
+            prefix: ''
+            suffix: ''
+id: node.cpb_employee.full
+targetEntityType: node
+bundle: cpb_employee
+mode: full
+content:
+  field_cpb_employee_picture:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            lbw: false
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: false
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            fi-def-at: false
+            prefix: '<br>'
+            suffix: ''
+    weight: 0
+    region: left
+  field_cpb_office_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            lbw: true
+            lbw-el: h4
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: false
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 5
+    region: right
+  field_department:
+    type: entity_reference_export
+    label: above
+    settings:
+      view_mode: default
+      link: false
+      extra: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: right
+  field_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            lbw: true
+            lbw-el: h4
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: false
+            ow-el: h4
+            ow-cl: ''
+            ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: true
+            fi-el: a
+            fi-cl: ''
+            fi-at: 'href="mailto:[node:field_email:value]"'
+            fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 6
+    region: right
+  field_phone_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            lbw: true
+            lbw-el: h4
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: false
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 7
+    region: right
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: Title
+            lbw: true
+            lbw-el: h4
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: false
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 3
+    region: right
+hidden:
+  field_cpb_colleague_spotlight: true
+  field_cpb_employee_focus: true
+  field_first_name: true
+  field_picture: true
+  field_primary_responsibilities: true
+  field_pronouns: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
