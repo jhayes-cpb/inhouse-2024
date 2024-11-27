@@ -9,7 +9,8 @@
 
 # Old setup files preserved for potential reflection
 /stash
-/web/core_compare
+/web/core_compare/
+
 
 # Ignore sensitive information
 /web/sites/README.txt
@@ -85,3 +86,5 @@ web/themes/.gitkeep
 !/web/themes/cpb_inhouse/css/jquery-ui.min.css
 !/web/themes/cpb_inhouse/css/squares.min.css
 !/web/themes/cpb_inhouse/css/images/*
+
+composer.lock
